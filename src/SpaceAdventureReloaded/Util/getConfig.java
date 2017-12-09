@@ -1,6 +1,7 @@
 package SpaceAdventureReloaded.Util;
 
 
+import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Startmenue.StartMenueWindow;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -9,6 +10,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
 import java.io.IOException;
 
 public class getConfig {
@@ -30,7 +32,11 @@ public class getConfig {
            }
 
             String playerName = playerList.item(0).getTextContent();
-           StartMenueWindow.setPlayerWelcome("Willkommen " + playerName);
+            StartMenueWindow.setPlayerWelcome("Willkommen " + playerName);
+
+
+           GlobalVars.PlayerName = playerName;
+
 
 
        } catch (ParserConfigurationException e) {

@@ -46,6 +46,7 @@ public class StartMenueWindow {
         MainMenueFrame.setSize(400, 300);
         MainMenueFrame.setLocationRelativeTo(null);
         MainMenueFrame.setIconImage(favicon.getImage());
+        MainMenueFrame.setResizable(false);
         MainMenueFrame.pack();
         MainMenueFrame.setVisible(true);
 
