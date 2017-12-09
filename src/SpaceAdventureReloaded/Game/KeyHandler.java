@@ -95,7 +95,7 @@ import java.awt.event.KeyListener;
                 System.exit(1);
 
             }
-            if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+           /* if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
                 if(Var.debugMode) {
                     print("Pressed Key ESCAPE");
                 }
@@ -109,7 +109,7 @@ import java.awt.event.KeyListener;
                 }
 
 
-            }
+            }*/
         }
 
         @Override

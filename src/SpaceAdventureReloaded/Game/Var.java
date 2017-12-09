@@ -103,6 +103,7 @@ public class Var {
 
             e.printStackTrace();
             System.out.println("[ERROR] -> Bilder konnten nicht geladen werden: " + e.getMessage());
+            System.exit(2);
         }
 
 
