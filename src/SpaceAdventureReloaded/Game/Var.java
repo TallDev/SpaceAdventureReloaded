@@ -9,69 +9,73 @@ import java.io.File;
 
 public class Var {
 
+    public static boolean debugMode = false;
+    public static boolean gameStarted = true;
+
+
     // Window
-    static JFrame jf1;
+    public static JFrame jf1;
 
-    static int screenWith = 800;
-    static int screenHeight = 600;
-    static boolean gameResizable = false;
+    public static int screenWith = 800;
+    public static int screenHeight = 600;
+    public static boolean gameResizable = false;
 
-    static String gameTitle = "Space Adventure";
+    public static String gameTitle = "Space Adventure";
 
     // Moving
-    static boolean moveUp = false, moveDown = false, moveLeft = false, moveRight = false;
+    public static boolean moveUp = false, moveDown = false, moveLeft = false, moveRight = false;
 
 
     // Keys
 
-    static int goUp = KeyEvent.VK_UP;
-    static int goDown = KeyEvent.VK_DOWN;
-    static int goLeft = KeyEvent.VK_LEFT;
-    static int goRight = KeyEvent.VK_RIGHT;
+    public static int goUp = KeyEvent.VK_UP;
+    public static int goDown = KeyEvent.VK_DOWN;
+    public static int goLeft = KeyEvent.VK_LEFT;
+    public static int goRight = KeyEvent.VK_RIGHT;
 
 
 
     // img
-    static BufferedImage ib1, ib2;
-    static BufferedImage irakete;
-    static BufferedImage iflamme1, iflamme2;
-    static BufferedImage igegner1;
+    public static BufferedImage ib1, ib2;
+    public static BufferedImage irakete;
+    public static BufferedImage iflamme1, iflamme2;
+    public static BufferedImage igegner1;
 
-    static BufferedImage ischrott1, ischrott2, ischrott3;
+    public static BufferedImage ischrott1, ischrott2, ischrott3;
 
-    static int backgroundY1 = 0, backgroundY2 = -600, backgroundSpeed = 9;
+    public static int backgroundY1 = 0, backgroundY2 = -600, backgroundSpeed = 9;
 
 
     // Flugobjekt
-    static int x = 400, y = 400;
-    static int speedUp = 3, speedDown = 2, speedLeft = 2, speedRight = 2;
-    static boolean kollidiert = false, verloren = false;
+    public static int x = 400, y = 400;
+    public static int speedUp = 3, speedDown = 2, speedLeft = 2, speedRight = 2;
+    public static boolean kollidiert = false, verloren = false;
 
     // Flamme
-    static int flammeAnimation;
+    public static int flammeAnimation;
 
     // Gegner
-    static int gegnerCount = 10;
-    static int gegnerx[] = new int[gegnerCount], gegnery[] = new int[gegnerCount];
-    static int gegnerspeed[] = new int[gegnerCount];
+    public static int gegnerCount = 10;
+    public static int gegnerx[] = new int[gegnerCount], gegnery[] = new int[gegnerCount];
+    public static int gegnerspeed[] = new int[gegnerCount];
 
     // Schrott
-    static int schrott = 0;
-    static int schrottx1[] = new int[5], schrotty1[] = new int[5];
-    static int schrottx2[] = new int[5], schrotty2[] = new int[5];
-    static int schrottx3, schrotty3;
-    // static int schrottSpeed[] = new int[5];
-    static int schrottSpeed1[] = new int[5], schrottSpeed2[] = new int[2], schrottSpeed3;
+    public static int schrott = 0;
+    public static int schrottx1[] = new int[5], schrotty1[] = new int[5];
+    public static int schrottx2[] = new int[5], schrotty2[] = new int[5];
+    public static int schrottx3, schrotty3;
+    // public static int schrottSpeed[] = new int[5];
+    public static int schrottSpeed1[] = new int[5], schrottSpeed2[] = new int[2], schrottSpeed3;
 
 
     // Player
-    static boolean life = true;
-    static int leben = 2;
+    public static boolean life = true;
+    public static int leben = 2;
 
 
 
     // Label
-    static Label lbl1;
+    public static Label lbl1;
 
     public Var() {
 
