@@ -43,7 +43,11 @@ public class Gui {
 
         // Var.jf1.setIconImage(setIconImage(ImageIO.read(new File("resources/favicon.png"))));
 
-        // TODO: Add Icon
+        ImageIcon img = new ImageIcon("resources/favicon.png");
+
+        Var.jf1.setIconImage(img.getImage());
+
+
 
         Var.jf1.setVisible(true);
     }
