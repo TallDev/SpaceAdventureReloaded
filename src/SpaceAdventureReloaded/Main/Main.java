@@ -7,10 +7,18 @@ import SpaceAdventureReloaded.Util.Util;
 
 public class Main {
 
+
+
+    /*
+    new SaveGameStats(); must be OVER  new Startmenue();
+
+     */
     public static void main(String[] args) {
+
         new SaveGameStats();
-         new Game();
-       // new Startmenue();
+        new Startmenue();
+         //new Game();  //Can now start via Startmenü
+
 
     }
 

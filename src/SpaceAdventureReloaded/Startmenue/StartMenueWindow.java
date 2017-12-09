@@ -1,5 +1,7 @@
 package SpaceAdventureReloaded.Startmenue;
 
+import SpaceAdventureReloaded.Game.Game;
+import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Util.Util;
 
 import javax.swing.*;
@@ -24,17 +26,21 @@ public class StartMenueWindow {
     static String s;
     boolean b = true;
 
+    public static JFrame MainMenueFrame;
+
     public StartMenueWindow() {
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: Close Window - open Game
+                MainMenueFrame.setVisible(false);
+                new Game();
+                GlobalVars.GameActive = true;
             }
         });
 
 
         ImageIcon favicon = new ImageIcon("resources/favicon.png");
-        JFrame MainMenueFrame = new JFrame("Space Adventure");
+        MainMenueFrame = new JFrame("Space Adventure");
         MainMenueFrame.setContentPane(rootPanel);
         MainMenueFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MainMenueFrame.setSize(400, 300);
@@ -70,7 +76,7 @@ public class StartMenueWindow {
                     } catch (IOException e1) {
                         e1.printStackTrace();
                     } catch (URISyntaxException e1) {
-                        e1.printStackTrace();
+                        Util.errorMessage("Ignoriere diese Meldung! Du kannst den Fehler melden, dann wird er beim nächsten mal gefixt", "Fehler", false);
                     }
                 }
             }

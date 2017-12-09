@@ -1,21 +1,63 @@
 package SpaceAdventureReloaded.Game;
 
+import SpaceAdventureReloaded.GlobalVars;
+import SpaceAdventureReloaded.Startmenue.StartMenueWindow;
+
 import javax.swing.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class Gui {
 
     public Gui() {
         Var.jf1 = new JFrame();
 
-        Var.jf1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Var.jf1.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        Var.jf1.addWindowListener(new WindowListener() {
+            @Override
+            public void windowOpened(WindowEvent e) {
 
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+
+                GlobalVars.GameActive = false;
+                StartMenueWindow.MainMenueFrame.setVisible(true);
+
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+
+            }
+        });
         // Size
         Var.jf1.setSize(Var.screenWith, Var.screenHeight);
         Var.jf1.setResizable(Var.gameResizable);
 
         Var.jf1.setLocationRelativeTo(null);
         Var.jf1.setLayout(null);
-
 
 
         // Label
