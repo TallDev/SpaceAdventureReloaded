@@ -10,7 +10,7 @@ import java.awt.event.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
+
 
 public class StartMenueWindow {
     private JButton startGameButton;
