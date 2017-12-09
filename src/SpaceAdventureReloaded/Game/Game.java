@@ -1,6 +1,6 @@
 package SpaceAdventureReloaded.Game;
 
-
+import SpaceAdventureReloaded.statsWindow.statsWindow;
 
 public class Game {
 
@@ -16,6 +16,8 @@ public class Game {
         new SchrottKollision();
         new SchrottMovement();
         new Var();
+
+        new statsWindow();
     }
 
 }

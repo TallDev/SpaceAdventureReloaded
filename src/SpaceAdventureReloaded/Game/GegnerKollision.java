@@ -27,7 +27,11 @@ public class GegnerKollision {
                                 Var.leben -= 1;
                             }
                             if(Var.leben == 0) {
+                                if(!Var.verloren) {
+                                   Var.kill("Du hasst zu viele Gegner berührt!");
+                                }
                                 Var.verloren = true;
+
                                 
                             }else if(Var.leben > 0) {
                                 Var.verloren = false;

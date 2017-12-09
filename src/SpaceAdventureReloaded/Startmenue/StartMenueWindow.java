@@ -1,6 +1,7 @@
 package SpaceAdventureReloaded.Startmenue;
 
 import SpaceAdventureReloaded.Game.Game;
+import SpaceAdventureReloaded.Game.Var;
 import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Util.Util;
 
@@ -34,6 +35,7 @@ public class StartMenueWindow {
             public void actionPerformed(ActionEvent e) {
                 MainMenueFrame.setVisible(false);
                 new Game();
+                Var.jf1.requestFocus();
                 GlobalVars.GameActive = true;
             }
         });

@@ -1,5 +1,10 @@
 package SpaceAdventureReloaded.Game;
 
+import SpaceAdventureReloaded.GlobalVars;
+import SpaceAdventureReloaded.Startmenue.StartMenueWindow;
+import SpaceAdventureReloaded.Startmenue.Startmenue;
+import SpaceAdventureReloaded.Util.Util;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -76,6 +81,14 @@ public class Var {
 
     // Label
     public static Label lbl1;
+
+
+    public static void kill(String reason) {
+        Var.jf1.setVisible(false);
+        StartMenueWindow.MainMenueFrame.setVisible(true);
+        Util.errorMessage(reason, "Du bist gestorben", false);
+    }
+
 
     public Var() {
 
