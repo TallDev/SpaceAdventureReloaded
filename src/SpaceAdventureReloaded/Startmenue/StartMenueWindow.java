@@ -34,7 +34,19 @@ public class StartMenueWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 MainMenueFrame.setVisible(false);
+                try {
+                    Thread.sleep(600);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+               // Var.resetData();
+                // new Var();
                 new Game();
+                Var.verloren = false;
+                Var.gameStarted = true;
+                Var.life = true;
+                Var.leben = GlobalVars.startLeben;
+
                 Var.jf1.requestFocus();
                 GlobalVars.GameActive = true;
             }

@@ -7,7 +7,7 @@ import java.util.TimerTask;
 public class GegnerMovement {
 
     Timer movement;
-    private int temp = 0;
+    public static int temp = 0;
     Random r = new Random();
     private int randomiseSystem = r.nextInt();
     public GegnerMovement() {

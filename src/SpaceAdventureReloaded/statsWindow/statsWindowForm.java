@@ -10,9 +10,11 @@ public class statsWindowForm {
     private JLabel LebenText;
     private JLabel LebenValue;
     private JPanel rootPanel;
+    private JLabel SchrottText;
+    private JLabel SchrottValue;
 
     Timer timer;
-    static JFrame statsFrame;
+    public static JFrame statsFrame;
 
     public statsWindowForm() {
 
@@ -34,6 +36,7 @@ public class statsWindowForm {
             public void run() {
 
                 LebenValue.setText(Integer.toString(Var.leben));
+                SchrottValue.setText(Integer.toString(Var.schrott));
 
             }
         }, 0, 10);

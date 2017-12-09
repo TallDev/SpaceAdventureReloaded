@@ -12,7 +12,7 @@ public class Gui {
     public Gui() {
         Var.jf1 = new JFrame();
 
-        Var.jf1.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        Var.jf1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Var.jf1.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {

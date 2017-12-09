@@ -7,7 +7,7 @@ public class SchrottMovement {
 
     Timer movement;
 
-    private int temp = 0;
+    public static int temp = 0;
 
     public SchrottMovement() {
 

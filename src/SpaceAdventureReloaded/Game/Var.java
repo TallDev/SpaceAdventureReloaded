@@ -4,6 +4,7 @@ import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Startmenue.StartMenueWindow;
 import SpaceAdventureReloaded.Startmenue.Startmenue;
 import SpaceAdventureReloaded.Util.Util;
+import SpaceAdventureReloaded.statsWindow.statsWindowForm;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -85,8 +86,9 @@ public class Var {
 
     public static void kill(String reason) {
         Var.jf1.setVisible(false);
+        statsWindowForm.statsFrame.setVisible(false);
         StartMenueWindow.MainMenueFrame.setVisible(true);
-        Util.errorMessage(reason, "Du bist gestorben", false);
+        Util.errorMessage(reason, "Du bist gestorben", true);
     }
 
 
@@ -144,4 +146,46 @@ public class Var {
 
     }
 
+    public static void resetData() {
+        moveUp = false; moveDown = false; moveLeft = false; moveRight = false;
+        backgroundY1 = 0; backgroundY2 = -600; backgroundSpeed = 9;
+
+        x = 400; y = 400;
+        speedUp = 3; speedDown = 2; speedLeft = 2; speedRight = 2;
+        kollidiert = false; verloren = false;
+
+
+        GegnerMovement.temp = 0;
+        SchrottMovement.temp = 0;
+
+
+
+
+        // Schrott
+        schrott = 0;
+
+
+
+        // Player
+        life = true;
+
+
+        gegnerspeed[0] = 2;
+        gegnerspeed[1] = 1;
+        gegnerspeed[2] = 5;
+        gegnerspeed[3] = 3;
+        gegnerspeed[4] = 2;
+
+
+        schrottSpeed1[0] = 2;
+        schrottSpeed1[1] = 1;
+        schrottSpeed1[2] = 5;
+        schrottSpeed1[3] = 3;
+        schrottSpeed1[4] = 2;
+
+        schrottSpeed2[0] = 4;
+        schrottSpeed2[1] = 3;
+
+        schrottSpeed3 = 8;
+    }
 }
