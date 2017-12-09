@@ -3,6 +3,7 @@ package SpaceAdventureReloaded.Game;
 import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Startmenue.StartMenueWindow;
 import SpaceAdventureReloaded.Startmenue.Startmenue;
+import SpaceAdventureReloaded.Util.SaveGameStats;
 import SpaceAdventureReloaded.Util.Util;
 import SpaceAdventureReloaded.statsWindow.statsWindowForm;
 
@@ -88,7 +89,9 @@ public class Var {
         Var.jf1.setVisible(false);
         statsWindowForm.statsFrame.setVisible(false);
         StartMenueWindow.MainMenueFrame.setVisible(true);
-        Util.errorMessage(reason, "Du bist gestorben", true);
+        SaveGameStats.saveGameStats();
+        Util.errorDieMessage("Super du hasst " + Var.schrott + " Schrottpunkte gesammelt!", true);
+
     }
 
 
@@ -141,7 +144,7 @@ public class Var {
         schrottSpeed2[0] = 4;
         schrottSpeed2[1] = 3;
 
-        schrottSpeed3 = 8;
+        schrottSpeed3 = 2;
 
 
     }

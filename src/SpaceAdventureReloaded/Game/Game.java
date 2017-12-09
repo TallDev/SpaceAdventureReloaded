@@ -1,10 +1,15 @@
 package SpaceAdventureReloaded.Game;
 
+import SpaceAdventureReloaded.Util.getConfig;
 import SpaceAdventureReloaded.statsWindow.statsWindow;
 
 public class Game {
 
     public Game() {
+        new Var();
+
+        new getConfig();
+
         new Background();
         new FlammeAnimation();
         new GegnerKollision();
@@ -15,7 +20,7 @@ public class Game {
         new PlayerMovement();
         new SchrottKollision();
         new SchrottMovement();
-        new Var();
+
 
         new statsWindow();
     }
