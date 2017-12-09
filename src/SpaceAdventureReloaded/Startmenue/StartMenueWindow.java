@@ -60,6 +60,7 @@ public class StartMenueWindow {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
 
+
                 // TODO: Schow Options Window
 
             }
