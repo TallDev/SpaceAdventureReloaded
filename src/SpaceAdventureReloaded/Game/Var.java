@@ -98,7 +98,7 @@ public class Var {
     public Var() {
         try {
             // Favicons
-//            favicon = new ImageIcon(faviconUrl);
+              // favicon = new ImageIcon(faviconUrl);
             // Background
             ib1 = ImageIO.read(new File("resources/bg1.png"));
             ib2 = ImageIO.read(new File("resources/bg1.png"));
