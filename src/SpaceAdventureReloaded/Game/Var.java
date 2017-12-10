@@ -96,7 +96,6 @@ public class Var {
 
 
     public Var() {
-
         try {
             // Favicons
 //            favicon = new ImageIcon(faviconUrl);
