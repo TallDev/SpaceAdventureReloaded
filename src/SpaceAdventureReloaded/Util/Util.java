@@ -1,5 +1,7 @@
 package SpaceAdventureReloaded.Util;
 
+import SpaceAdventureReloaded.GlobalVars;
+
 import javax.swing.*;
 
 
@@ -8,6 +10,10 @@ public class Util {
     public static final String GAME_WEBPAGE = "No web page found";
 
 
+
+    public static void setPlayerNameLocal(String playername) {
+        GlobalVars.PlayerName = playername;
+    }
 
     public static void errorMessage(String infoMessage, String titleBar, boolean killGame)
     {

@@ -4,6 +4,7 @@ import SpaceAdventureReloaded.Game.Game;
 import SpaceAdventureReloaded.Game.Var;
 import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Util.Util;
+import SpaceAdventureReloaded.Util.getConfig;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,6 +22,7 @@ public class StartMenueWindow {
     private JLabel PlayerWelcome;
     private JLabel optionsIconLabel;
     private JLabel logo;
+    private JLabel playerIconLabel;
 
 
     static boolean a = false;
@@ -95,6 +97,26 @@ public class StartMenueWindow {
                         Util.errorMessage("Ignoriere diese Meldung! Du kannst den Fehler melden, dann wird er beim nächsten mal gefixt", "Fehler", false);
                     }
                 }
+            }
+        });
+        playerIconLabel.addComponentListener(new ComponentAdapter() {
+        });
+        playerIconLabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                // TODO: Open window to change user
+                new newPlayer();
+                String in = newPlayer.showNewPlayerDialogue();
+                Util.setPlayerNameLocal(in);
+                getConfig.setPlayerName(in);
+                try {
+                    Thread.sleep(200L);
+                } catch (InterruptedException l) {
+                    l.printStackTrace();
+                }
+                System.exit(3);
+
             }
         });
     }

@@ -4,6 +4,7 @@ package SpaceAdventureReloaded.Util;
 import SpaceAdventureReloaded.Game.Var;
 import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Startmenue.StartMenueWindow;
+import SpaceAdventureReloaded.Startmenue.newPlayer;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -65,37 +66,64 @@ public class getConfig {
     }
 
 
-    public void getPlayerName() {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    public static void getPlayerName() {
 
-        try {
-            DocumentBuilder builder = factory.newDocumentBuilder();
 
-            Document doc = builder.parse("stats/stats.xml");
 
-            NodeList playerList = doc.getElementsByTagName("name");
-            if(playerList.getLength() > 1 || playerList.getLength() == 0) {
-                Util.errorMessage("Config Fehler", "Fehler in der Config bitte überprüfen!", true);
+        File f = new File("stats/stats.txt");
+        if(f.exists() && !f.isDirectory()) {
+
+            try {
+                BufferedReader br;
+                br = new BufferedReader(new FileReader("stats/stats.txt"));
+
+                String playername = br.readLine();
+                Util.setPlayerNameLocal(playername);
+                // StartMenueWindow.setPlayerWelcome("Willkommen " + playername);
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
-            String playerName = playerList.item(0).getTextContent();
-            StartMenueWindow.setPlayerWelcome("Willkommen " + playerName);
-
-
-            GlobalVars.PlayerName = playerName;
-
-
-
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            try {
+                f.createNewFile();
+                PrintWriter writer = new PrintWriter("stats/stats.txt", "UTF-8");
+                writer.println("");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
     }
 
+    public static void setPlayerName(String playername) {
 
+        Util.setPlayerNameLocal(playername);
+        try {
+            // Write name in File
+            File file = new File("stats/stats.txt");
+            if (file.exists() && !file.isDirectory()) {
+
+                PrintWriter writer = new PrintWriter("stats/stats.txt", "UTF-8");
+                writer.println(playername);
+                writer.close();
+
+
+            } else {
+                file.createNewFile();
+                PrintWriter writer = new PrintWriter("stats/stats.txt", "UTF-8");
+                writer.println(playername);
+                writer.close();
+            }
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 

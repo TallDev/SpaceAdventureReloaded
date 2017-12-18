@@ -8,7 +8,7 @@ public class Game {
     public Game() {
         new Var();
 
-        new getConfig();
+
 
         new Background();
         new FlammeAnimation();
