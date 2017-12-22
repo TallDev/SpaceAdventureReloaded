@@ -19,7 +19,9 @@ public class Main {
     public static void main(String[] args) {
 
         //new getConfig();
+        new newPlayer();
         new Startmenue();
+        new GlobalVars();
         new getConfig();
         Util.errorMessage("Willkommen " + GlobalVars.PlayerName + "! Du bist nicht " + GlobalVars.PlayerName + "? Dann kannst du den Spieler auf dem Personenknopf ändern", "Willkommen", false);
 

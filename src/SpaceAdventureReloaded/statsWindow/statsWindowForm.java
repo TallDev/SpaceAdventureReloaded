@@ -1,6 +1,7 @@
 package SpaceAdventureReloaded.statsWindow;
 
 import SpaceAdventureReloaded.Game.Var;
+import SpaceAdventureReloaded.GlobalVars;
 
 import javax.swing.*;
 import java.util.Timer;
@@ -12,6 +13,8 @@ public class statsWindowForm {
     private JPanel rootPanel;
     private JLabel SchrottText;
     private JLabel SchrottValue;
+    private JLabel PlayerText;
+    private JLabel NameValue;
 
     Timer timer;
     public static JFrame statsFrame;
@@ -37,6 +40,7 @@ public class statsWindowForm {
 
                 LebenValue.setText(Integer.toString(Var.leben));
                 SchrottValue.setText(Integer.toString(Var.schrott));
+                NameValue.setText(GlobalVars.PlayerName);
 
             }
         }, 0, 10);

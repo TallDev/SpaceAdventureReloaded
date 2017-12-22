@@ -4,6 +4,7 @@ package SpaceAdventureReloaded.Util;
 import SpaceAdventureReloaded.Game.Var;
 import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Startmenue.StartMenueWindow;
+import SpaceAdventureReloaded.Startmenue.Startmenue;
 import SpaceAdventureReloaded.Startmenue.newPlayer;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -78,7 +79,13 @@ public class getConfig {
                 br = new BufferedReader(new FileReader("stats/stats.txt"));
 
                 String playername = br.readLine();
-                Util.setPlayerNameLocal(playername);
+                System.out.println(playername);
+                if(playername == null) {
+                    newPlayer.showNewPlayerDialogue(true);
+                } else {
+                    Util.setPlayerNameLocal(playername);
+                }
+
                 // StartMenueWindow.setPlayerWelcome("Willkommen " + playername);
 
             } catch (FileNotFoundException e) {

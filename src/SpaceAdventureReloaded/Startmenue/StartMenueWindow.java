@@ -107,7 +107,7 @@ public class StartMenueWindow {
                 super.mouseClicked(e);
                 // TODO: Open window to change user
                 new newPlayer();
-                String in = newPlayer.showNewPlayerDialogue();
+                String in = newPlayer.showNewPlayerDialogue(false);
                 Util.setPlayerNameLocal(in);
                 getConfig.setPlayerName(in);
                 try {

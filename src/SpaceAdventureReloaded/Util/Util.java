@@ -17,7 +17,8 @@ public class Util {
 
     public static void errorMessage(String infoMessage, String titleBar, boolean killGame)
     {
-        JOptionPane.showMessageDialog(null, infoMessage, "Error:" + titleBar, JOptionPane.WARNING_MESSAGE);
+
+        JOptionPane.showMessageDialog(null, infoMessage, titleBar, JOptionPane.WARNING_MESSAGE);
         if(killGame) {
             try {
                 Thread.sleep(200L);
