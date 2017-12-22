@@ -1,9 +1,15 @@
 package SpaceAdventureReloaded.Startmenue;
 
+import java.io.IOException;
+
 public class Startmenue {
 
     public Startmenue() {
-        new StartMenueWindow();
+        try {
+            new StartMenueWindow();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

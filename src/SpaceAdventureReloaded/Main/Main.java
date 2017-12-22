@@ -1,10 +1,8 @@
 package SpaceAdventureReloaded.Main;
 
-import SpaceAdventureReloaded.Game.Game;
 import SpaceAdventureReloaded.GlobalVars;
 import SpaceAdventureReloaded.Startmenue.Startmenue;
 import SpaceAdventureReloaded.Startmenue.newPlayer;
-import SpaceAdventureReloaded.Util.SaveGameStats;
 import SpaceAdventureReloaded.Util.Util;
 import SpaceAdventureReloaded.Util.getConfig;
 

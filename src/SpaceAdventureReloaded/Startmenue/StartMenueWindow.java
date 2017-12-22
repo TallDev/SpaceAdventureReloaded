@@ -31,7 +31,7 @@ public class StartMenueWindow {
 
     public static JFrame MainMenueFrame;
 
-    public StartMenueWindow() {
+    public StartMenueWindow() throws IOException {
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -55,13 +55,13 @@ public class StartMenueWindow {
         });
 
 
-        ImageIcon favicon = new ImageIcon("resources/favicon.png");
+        //BufferedImage favicon = ImageIO.read(new File("resources/favicon.png"));
         MainMenueFrame = new JFrame("Space Adventure");
         MainMenueFrame.setContentPane(rootPanel);
         MainMenueFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MainMenueFrame.setSize(400, 300);
         MainMenueFrame.setLocationRelativeTo(null);
-        MainMenueFrame.setIconImage(favicon.getImage());
+        //MainMenueFrame.setIconImage(favicon);
         MainMenueFrame.setResizable(false);
         MainMenueFrame.pack();
         MainMenueFrame.setVisible(true);
